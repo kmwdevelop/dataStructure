@@ -4,9 +4,21 @@ my_list = [None] * capacity
 
 top = -1
 
+def isEmpty() :
+  if top == -1 :
+    return True
+  else :
+    return False
+  
+def isFull() :
+  if top == capacity - 1 :
+    return True
+  else :
+    return False
+
 def pop() :
   global top
-  if top == -1 :
+  if isEmpty() :
     print("Stack is empty")
     return
   data = my_list[top]
@@ -16,7 +28,7 @@ def pop() :
 
 def push(data) :
   global top
-  if top == len(my_list) -1 :
+  if isFull() :
     print("Stack is full")
     return
   
@@ -28,6 +40,10 @@ def push(data) :
 print(push(34))
 print(push(35))
 print(push(37))
+print(push(38))
+print(push(38))
+print(push(38))
+print(push(38))
 print(push(38))
 print(pop())
 print(pop())
