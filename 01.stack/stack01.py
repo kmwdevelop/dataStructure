@@ -36,7 +36,16 @@ def push(data) :
   my_list[top] = data
   
   return data
+
+def peek() :
+  if isEmpty() :
+    print("Stack is empty")
+    return
+  return my_list[top]
    
+def size() :
+  return top + 1
+
 print(push(34))
 print(push(35))
 print(push(37))
